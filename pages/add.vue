@@ -90,6 +90,7 @@ function saveForm() {
         phoneNumber: form.value.phoneNumber ?? ""
     })
     form.value = {}
+    navigateTo({name:"index"})
 }
 
 function deleteDiploma(place:number){

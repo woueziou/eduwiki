@@ -1,8 +1,11 @@
 <template>
     <div class="space-y-4  overflow-y-hidden">
-        <div class="h-24"></div>
+        <div class="h-4"></div>
         <div class="flex flex-col   place-items-center space-y-4">
-          
+            <div class="flex place-items-end">
+                <div class="text-5xl">e</div> <span class="pl-1">du</span> <span class=" font-bold text-purple-400">wiki</span>
+            </div>
+         
             <div class="font-thin">edu wiki</div>
             <UInput v-model="searchKey" :ui="{ icon: { trailing: { pointer: '' } } }" placeholder="Faire une recherche" size="lg"
                 class="w-2/6 rounded-xl">
