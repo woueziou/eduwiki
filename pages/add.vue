@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col place-items-center">
         <div class="text-3xl font-thin pt-4">Ajouter un nouvel établissement</div>
-        {{ form }}
+
         <div class="flex flex-col w-1/4 pt-4 space-y-4">
             <div class="flex flex-col place-items-start w-full space-y-1">
                 <span class=" font-thin">Nom de l'établissement</span>
@@ -23,7 +23,7 @@
                 <UButton variant="soft" @click="() => isOpen = true">Ajouter une formation</UButton>
             </div>
 
-            <div v-for="(f,i) in form.formations" :key="f.name"
+            <div v-for="(f, i) in form.formations" :key="f.name"
                 class="flex space-y-2 relative flex-col py-2 place-items-start bg-slate-50 p-2 rounded-lg">
                 <span class="">{{ f.name }}</span>
                 <div class="divide divide-red-200 divide-solid"></div>
@@ -90,12 +90,12 @@ function saveForm() {
         phoneNumber: form.value.phoneNumber ?? ""
     })
     form.value = {}
-    navigateTo({name:"index"})
+    navigateTo({ name: "index" })
 }
 
-function deleteDiploma(place:number){
+function deleteDiploma(place: number) {
     console.log(place)
-    form.value.formations?.splice(place,1)
+    form.value.formations?.splice(place, 1)
 }
 </script>
 

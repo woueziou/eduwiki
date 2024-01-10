@@ -21,7 +21,7 @@
             </div>
             <div class="p-4 h-full place-content-center  flex flex-col place-items-center" v-if="schools.length==0 && searchKey.length===0">
             <div class="text-sm">Pas d'établissement actuellement</div>
-            <UButton variant="ghost" class="text-sm">ajoutez </UButton>
+            <UButton @click="navigateTo({name:'admin'})" variant="ghost" class="text-sm">ajoutez </UButton>
             <!-- <div class="font-thin">Aucune donnée trouvée</div> -->
             </div>
             <div class="flex place-items-center flex-col overflow-y-auto space-y-6 w-3/5 p-4 ">
